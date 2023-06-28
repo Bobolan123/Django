@@ -14,4 +14,8 @@
         {% endfor %}
     </ul>
     <a href="{% url 'tasks:add' %}">Add task</a>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" name="delete" value="Delete All Tasks">
+    </form>
 {% endblock %}
