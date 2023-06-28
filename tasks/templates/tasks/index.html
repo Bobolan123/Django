@@ -4,7 +4,7 @@
     <h1>Tasks</h1>
     <ul>
         {% for task in tasks %}
-            <li>{{task}}</li>
+        <li>{{ task["task"] }} - {{ task["priority"] }}</li>
         {% empty %}
             <li>No tasks</li>
         {% endfor %}
