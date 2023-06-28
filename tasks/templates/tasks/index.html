@@ -2,6 +2,10 @@
 
 {% block body %}
     <h1>Tasks</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" name="delete" value="Delete All Tasks">
+    </form>
     <ul>
         {% for task in tasks %}
             <li>{{task}}</li>

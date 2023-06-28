@@ -13,6 +13,9 @@ def index(request):
     if "tasks" not in request.session:
         request.session["tasks"] = []
 
+    if request.method == "POST" and "delete" in request.POST:
+        request.session["tasks"] = []
+        return HttpResponseRedirect(reverse("tasks:index"))
     return render(request, "tasks/index.html", {
         "tasks" : request.session["tasks"]
     })
