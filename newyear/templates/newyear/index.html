@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Is it new year?</title>
+        <link rel="stylesheet" href="{% static 'newyear/styles.css' %}">
+    </head>
+    <body>
+        {% if newyear %}
+            <h1>YES</h1>
+        {% else %}
+            <h1>NO</h1>
+            <h3>Today is {{now}} </h3>
+            {% if days == 1 %}
+                <h3>There are still {{days}} day left.</h3>
+            {% else %}
+                <h3>There are still {{days}} days left.</h3>
+            {% endif %} 
+        {% endif %}
+
+    </body>
+</html>

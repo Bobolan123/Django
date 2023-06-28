@@ -1,0 +1,14 @@
+body {
+    display: block;
+    background-color: aqua;
+    font-size: xx-large;
+}
+
+h1 {
+    font-size: larger;
+    text-decoration: underline;
+}
+
+form {
+    display: block;
+}
